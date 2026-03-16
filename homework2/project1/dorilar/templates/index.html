@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bosh sahifa</title>
+    <style>
+        /* Asosiy sozlamalar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', 'Segoe UI', sans-serif; /* Zamonaviy font */
+            /* Yumshoq va ijodiy gradinet background */
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        /* Markaziy konteyner - glassmorphism effekti */
+        .main-container {
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+            backdrop-filter: blur(10px); /* Orqa fonni xiralashtirish */
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            padding: 50px;
+            text-align: center;
+            width: 90%;
+            max-width: 500px;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 35px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        /* Navigatsiya tugmalari */
+        nav {
+            display: flex;
+            flex-direction: column; /* Tugmalarni ustma-ust joylashtirish */
+            gap: 15px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #4a4a4a;
+            background: rgba(255, 255, 255, 0.7); /* Yarim shaffof oq fon */
+            padding: 15px 25px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* Hover effekti */
+        a:hover {
+            background: #fff; /* To'liq oq fon */
+            transform: translateY(-3px); /* Bir oz tepaga ko'tarilish */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <h1>Xush kelibsiz</h1>
+        
+        <nav>
+    <a href="{% url 'about' %}">O'zimiz haqimizda</a>
+    <a href="{% url 'contact' %}">Bog'lanish</a>
+    <a href="{% url 'dorilar' %}">Dorilar katalogi</a>
+    
+    <a href="{% url 'mutaxasislar' %}" style="background: rgba(44, 62, 80, 0.7);">Mutaxassislarimiz</a>
+</nav>
+    </div>
+</body>
+</html>

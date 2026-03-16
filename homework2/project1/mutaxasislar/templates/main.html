@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mutaxassislar Asosiy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #2c3e50;
+        }
+
+        .main-card {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(15px);
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            padding: 40px 60px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            position: relative; /* Ichki elementlarni joylash uchun */
+        }
+
+        /* Orqaga qaytish havolasi stili */
+        .back-link {
+            text-decoration: none;
+            color: #555;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+
+        .back-link:hover {
+            color: #000;
+            transform: translateX(-5px);
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 35px;
+            color: #555;
+        }
+
+        .btn-link {
+            text-decoration: none;
+            color: white;
+            background: #34495e;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-link:hover {
+            background: #2c3e50;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="main-card">
+        <a href="{% url 'home' %}" class="back-link">← Bosh sahifaga qaytish</a>
+        
+        <h1>Bu yerda Mutaxassislarimiz haqida ma'lumot bo'ladi</h1>
+        <p>Bizning jamoamizdagi tajribali mutaxassislar bilan tanishishga tayyormisiz?</p>
+        
+        <a href="{% url 'mutaxasislar' %}" class="btn-link">Mutaxassislar sahifasiga o'tish →</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bog'lanish</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', 'Segoe UI', sans-serif;
+            /* Kreativ va yumshoq fon */
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #2c3e50;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 60px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 40px;
+            letter-spacing: -1px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-size: 1.1rem;
+            font-weight: 500;
+            padding: 12px 30px;
+            border: 2px solid #2c3e50;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            background: #2c3e50;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Biz bilan bog'lanish</h1>
+        <a href="{% url 'home' %}">Bosh sahifaga qaytish</a>
+    </div>
+</body>
+</html>
