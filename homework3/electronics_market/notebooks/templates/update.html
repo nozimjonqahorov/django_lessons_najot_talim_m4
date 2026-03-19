@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <input name="brand" type="text" placeholder="Notebook brandi" value={{notebook.brand}}><br>
+        <input name="model_name" type="text" placeholder="modeli" value='{{notebook.model_name}}'><br>
+        <input name="processor" type="text" placeholder="processor" value={{notebook.processor}}><br>
+        <input name="ram" type="text" placeholder="RAM" value={{notebook.ram}}><br>
+        <input name="storage" type="text" placeholder="storage" value={{notebook.storage}}><br>
+        <input name="price" type="text" placeholder="price" value={{notebook.price}}><br>
+        <input name="stock" type="text" placeholder="stock" value={{notebook.stock}}><br>
+        <button type="submit">Saqlash</button>
+    </form>
+</body>
+</html>

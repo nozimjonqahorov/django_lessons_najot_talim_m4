@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroMarket | Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto">
+        <div class="text-2xl font-bold tracking-tighter text-blue-400">ELECTRO.UZ</div>
+        <div class="space-x-8 text-sm font-medium uppercase tracking-widest">
+            <a href="{% url 'home' %}" class="hover:text-blue-400 transition">Asosiy</a>
+            <a href="{% url 'about' %}" class="hover:text-blue-400 transition">Biz haqimizda</a>
+            <a href="{% url 'contact' %}" class="hover:text-blue-400 transition">Aloqa</a>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto mt-20 px-6 text-center">
+        <h1 class="text-6xl font-black mb-6">
+            Sifatli <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Elektronika</span> Dunyosi
+        </h1>
+        <p class="text-gray-400 text-xl mb-16 max-w-2xl mx-auto">
+            Eng so'nggi rusumdagi telefonlar va kuchli noutbuklarni bizning do'konimizdan topishingiz mumkin.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            
+            <a href="{% url 'phones' %}" class="glass-effect p-12 rounded-3xl hover:bg-white/10 transition-all group border-b-4 border-blue-500">
+                <div class="text-5xl mb-6 group-hover:scale-110 transition duration-300">📱</div>
+                <h2 class="text-3xl font-bold mb-2">Telefonlar</h2>
+                <p class="text-gray-400">Smartfonlar va aksessuarlar to'plami.</p>
+                <div class="mt-6 text-blue-400 font-bold group-hover:translate-x-2 transition inline-block">Barchasini ko'rish &rarr;</div>
+            </a>
+
+            <a href="{% url 'notebooks' %}" class="glass-effect p-12 rounded-3xl hover:bg-white/10 transition-all group border-b-4 border-emerald-500">
+                <div class="text-5xl mb-6 group-hover:scale-110 transition duration-300">💻</div>
+                <h2 class="text-3xl font-bold mb-2">Noutbuklar</h2>
+                <p class="text-gray-400">Ish va o'yin uchun kuchli noutbuklar.</p>
+                <div class="mt-6 text-emerald-400 font-bold group-hover:translate-x-2 transition inline-block">Barchasini ko'rish &rarr;</div>
+            </a>
+
+        </div>
+    </main>
+
+    <footer class="mt-32 py-10 border-t border-white/5 text-center text-gray-500 text-sm">
+        &copy; 2026 Nozimjon Qahorov. Barcha huquqlar himoyalangan.
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<a href="{% url 'notebooks' %}">Notebooklar</a><hr>
+
+{% if notebook %}
+    Brand: {{ notebook.brand }}<br>
+    Narxi:{{ notebook.price }}<br>
+    RAM: {{ notebook.ram }}<br>
+    Soni: {{ notebook.stock }}<br><br>
+    
+    <a href="{% url 'delete' notebook.id %}">O'chirish</a><br>
+    <a href="{% url 'update' notebook.id %}">Update</a>
+
+
+{% else %}
+
+notebook topilmadi
+
+{% endif %}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biz haqimizda | ElectroMarket</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: #0f172a;
+            color: white;
+            min-height: 100vh;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto">
+        <div class="text-2xl font-bold tracking-tighter text-blue-400">ELECTRO.UZ</div>
+        <div class="space-x-8 text-sm font-medium uppercase tracking-widest">
+            <a href="{% url 'home' %}" class="hover:text-blue-400 transition">Asosiy</a>
+            <a href="{% url 'about' %}" class="text-blue-400">Biz haqimizda</a>
+            <a href="{% url 'contact' %}" class="hover:text-blue-400 transition">Aloqa</a>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto mt-20 px-6">
+        <div class="text-center mb-16">
+            <h1 class="text-5xl font-extrabold mb-4">Biz Haqimizda</h1>
+            <div class="h-1 w-20 bg-blue-500 mx-auto rounded-full"></div>
+        </div>
+
+        <div class="glass p-10 rounded-3xl space-y-8 leading-relaxed text-gray-300">
+            <p class="text-xl">
+                <span class="text-blue-400 font-bold">ElectroMarket</span> — bu shunchaki onlayn do'kon emas, balki yuqori texnologiyalar olamiga sizning yo'lingizdir. Biz 2026-yildan buyon mijozlarimizga eng so'nggi rusumdagi gadjetlarni taqdim etib kelmoqdamiz.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8 py-4">
+                <div class="border-l-4 border-emerald-500 pl-4">
+                    <h3 class="text-white font-bold text-lg">Bizning Maqsadimiz</h3>
+                    <p class="text-sm">O'zbekiston bo'ylab har bir xonadonga sifatli va hamyonbop elektronika yetkazib berish.</p>
+                </div>
+                <div class="border-l-4 border-blue-500 pl-4">
+                    <h3 class="text-white font-bold text-lg">Kafolat</h3>
+                    <p class="text-sm">Barcha mahsulotlarimiz rasmiy kafolatga ega va 100% original hisoblanadi.</p>
+                </div>
+            </div>
+
+            <p>
+                Bizning jamoamiz har bir mijoz uchun individual yondashuvni kafolatlaydi. Biz bilan siz nafaqat qurilma, balki ishonchli hamkorga ega bo'lasiz.
+            </p>
+
+            <div class="pt-6 text-center">
+                <a href="{% url 'home' %}" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-all">
+                    Xaridni boshlash
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mt-20 py-10 text-center text-gray-500 text-sm">
+        &copy; 2026 Nozimjon Qahorov.
+    </footer>
+
+</body>
+</html>

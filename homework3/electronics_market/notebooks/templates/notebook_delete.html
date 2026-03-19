@@ -1,0 +1,17 @@
+<form method='post'>
+    {%csrf_token%}
+    <a href="{% url 'notebooks' %}">Notebooklar</a></br>
+
+    {% if notebook %}
+        {{ notebook.brand }} notebookni o'chirishga aminmisiz </br>
+
+        <button type='submit'>Ha</button>
+        <a href="{% url 'detail' notebook.id %}">Yo'q</a>
+
+
+    {% else %}
+
+    notebook topilmadi
+
+    {% endif %}
+</form>
