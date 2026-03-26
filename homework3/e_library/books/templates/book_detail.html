@@ -1,0 +1,14 @@
+
+{% if book %}
+    <h2>{{ book.title }}</h2>
+    <p>Muallif: {{ book.author }}</p>
+    <p>yili: {{ book.published_year }}</p>
+    <p>Ezoh: {{ book.description }}</p>
+    <p>Narxi: {{ book.price }}</p>
+    <p>isbn: {{ book.isbn }}</p>
+    <a href="{% url 'books_list' %}"> Kitoblar</a>
+    <a href="{% url 'delete' book.id %}"> Uchirish</a>
+    <a href="{% url 'update' book.id %}"> Uzgartirish</a>
+{% else %}
+    <p>Kitob topilmadi</p>
+{% endif %}

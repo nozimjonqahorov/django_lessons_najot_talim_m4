@@ -1,0 +1,22 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF_8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Add news</title>
+    </head>
+<body>
+    <button><a href="{% url 'list' %}" class="back-link"> Ortga qaytish</a></br></button>
+    <form method="post">
+        {% csrf_token %}
+        <input name="title" type="text" placeholder="Sarlavha"><br>
+        <input name="author" type="text" placeholder="Muallif nomi"><br>
+        <input name="country" type="text" placeholder="Davlati"><br>
+        <input name="desc" type="text" placeholder="Matni"><br>
+      
+        <button type="submit">Saqlash</button>
+        
+    </form>
+</body>
+</html>

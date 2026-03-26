@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add notebook</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <input name="brand" type="text" placeholder="Brand"><br>
+        <input name="model_name" type="text" placeholder="Model nomi"><br>
+        <input name="processor" type="text" placeholder="Processor"><br>
+        <input name="ram" type="text" placeholder="ram"><br>
+        <input name="storage" type="text" placeholder="Xotira"><br>
+        <input name="price" type="text" placeholder="Narxi"><br>
+        <input name="stock" type="text" placeholder="Soni"><br>
+        <button type="submit">Saqlash</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,44 @@
+# 1 
+books = Book.objects.filter(published_year__gte=2022)
+for book in books:
+   print(book.title)
+
+# 2 
+books = Book.objects.all()
+for book in books:
+    ...:     print(f"{book.title} kitobi narxi: {book.price}")
+
+
+#3 
+books = Book.objects.all().order_by('-price')[:5]
+for book in books:
+    ...:     print(f"{book.title} kitobi narxi: {book.price}")
+
+#4 4 - "Fiction" kategoryasida nechta kitob boer ?
+
+total_count = Book.objects.filter(category__name="Fiction").count()
+print(f"Jami kitoblar: {total_count}")
+
+#5 
+from django.db.models import Avg
+average_price = Book.objects.aggregate(Avg('price'))
+print(average_price)
+
+#6 3 tadan ko'p kategoriyada kitob yozgan yozuvchilar
+from django.db.models import Count
+
+authors = Author.objects.annotate(
+    category_count=Count('book__category', distinct=True)
+).filter(category_count__gt=3)
+
+# Natijani ko'rish uchun:
+for author in authors:
+    print(f"{author.name}: {author.category_count} ta kategoriya")
+
+
+
+7. Umuman kitob mavjud bo'lmagan kategoriyalar
+empty_categories = Category.objects.filter(books__isnull=True)
+
+for cat in empty_categories:
+    print(cat.name)

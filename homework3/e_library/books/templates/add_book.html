@@ -1,0 +1,26 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF_8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Add book</title>
+    </head>
+<body>
+    <button><a href="{% url 'books_list' %}" class="back-link"> Ortga qaytish</a></br></button>
+    <form method="post">
+        {% csrf_token %}
+        <input name="title" type="text" placeholder="Kitob nomi"><br>
+        <input name="author" type="text" placeholder="Muallif nomi"><br>
+        <input name="description" type="text" placeholder="Ezoh"><br>
+        <input name="isbn" type="text" placeholder="isbn"><br>
+        <input name="published_year" type="text" placeholder="publish yili"><br>
+        <input name="price" type="text" placeholder="Kitob narxi"><br>
+        <input name="created_at" type="text" placeholder="created"><br>
+        <input name="updated_at" type="text" placeholder="updated"><br>
+        <button type="submit">Saqlash</button>
+        
+    </form>
+</body>
+</html>
+

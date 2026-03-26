@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitoblar</title>
+
+
+</head>
+<body> 
+
+    <div class="container">
+        <div class="header">
+            
+            <h1>Bizning kitoblar</h1>
+
+            
+        </div>
+        
+
+        <div class="grid">
+            {% for book in books %}
+            <div class="card">
+                
+                   <a href="{% url 'detail' book.id %}"> <span>{{ book.title }}</span><br><br>
+                
+             
+            </div>
+            {% empty %}
+            <p style="text-align: center; grid-column: 1/-1;">Hozircha kitoblarlar ro'yxati bo'sh.</p>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="container">
+        <div class="header">
+           <button><a href="{% url 'add-book' %}" class="back-link"> Kitob qushish</a></br> <br></button>
+            <button><a href="{% url 'home' %}" class="back-link"> Bosh sahifaga  qaytish</a></br></button>
+    </div>
+
+</body>
+</html>

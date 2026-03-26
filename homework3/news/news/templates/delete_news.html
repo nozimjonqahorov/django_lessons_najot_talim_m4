@@ -1,0 +1,13 @@
+<form method="post">
+    {% csrf_token %}
+    {% if news %}
+        <h2>{{ news.title }}</h2> Yangilikni uchirishga aminmisiz?
+        <button type="submit">Ha </button>
+        <a href="{% url 'detail' news.id %}"> Yo'q </a>
+
+        
+
+    {% else %}
+        <p>Yangilik topilmadi</p>
+    {% endif %}
+</form>
