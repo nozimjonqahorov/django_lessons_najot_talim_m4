@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ phone.brand }} {{ phone.model_name }}</title>
+</head>
+<body>
+
+    <a href="{% url 'phones_list' %}">← Orqaga qaytish</a>
+
+    <h1>{{ phone.brand }} {{ phone.model_name }}</h1>
+
+    <ul>
+        <li><strong>Xotirasi:</strong> {{ phone.memory }}</li>
+        <li><strong>Rangi:</strong> {{ phone.color }}</li>
+        <li><strong>Narxi:</strong> {{ phone.price }} $</li>
+        <li><strong>Omborda:</strong> {{ phone.stock }} ta</li>
+    </ul>
+
+    <h3>Qisqacha ma'lumot:</h3>
+    <p>{{ phone.description|default:"Ma'lumot mavjud emas." }}</p>
+
+    <hr>
+    <div style="display: flex; gap: 15px;">
+        <a href="{% url 'phone_edit' phone.pk %}" style="color: blue;">Tahrirlash</a>
+        <a href="{% url 'phone_delete' phone.pk %}" style="color: red;">O'chirish</a>
+    </div>
+
+</body>
+</html>

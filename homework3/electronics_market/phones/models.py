@@ -13,5 +13,8 @@ class Phones(models.Model):
         return f"{self.brand} {self.model_name}"
 
     class Meta:
+        db_table = "phones"
         verbose_name = "Telefon"
         verbose_name_plural = "Telefonlar"
+
+        

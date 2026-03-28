@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>O'chirishni tasdiqlash</title>
+</head>
+<body>
+
+    <h1>O'chirishni tasdiqlaysizmi?</h1>
+
+    <p>
+        Siz haqiqatdan ham <strong>{{ phone.brand }} {{ phone.model_name }}</strong> 
+        modelini ma'lumotlar bazasidan o'chirib tashlamoqchimisiz?
+    </p>
+
+    <form method="post">
+        {% csrf_token %}
+        
+        <button type="submit" style="color: red; font-weight: bold;">
+            Ha, o'chirilsin
+        </button>
+        
+        <a href="{% url 'phones_list' %}">Yo'q, bekor qilish</a>
+    </form>
+
+</body>
+</html>

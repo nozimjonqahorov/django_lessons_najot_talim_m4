@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% if form.instance.pk %}Telefonni tahrirlash{% else %}Yangi telefon{% endif %}
+    </title>
+</head>
+<body>
+
+    <h1>
+        {% if form.instance.pk %}Telefonni tahrirlash{% else %}Yangi telefon qo'shish{% endif %}
+    </h1>
+
+    <form method="post">
+        {% csrf_token %}
+        
+        <table>
+            {{ form.as_table }}
+        </table>
+
+        <div style="margin-top: 20px;">
+            <button type="submit">Saqlash</button>
+            <a href="{% url 'phones_list' %}">Bekor qilish</a>
+        </div>
+    </form>
+
+</body>
+</html>
